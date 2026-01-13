@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dental Tourism Albania | Premium Dental Services & City Destinations
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* Primary Colors */
+        --primary-base: #1a759f;
+        --primary-dark: #116287;
+        --primary-light: #1c82b1;
+        --primary-soft: #e0f2fe;
+
+        /* Secondary Colors */
+        --secondary-base: #14706b;
+        --secondary-dark: #11615d;
+        --secondary-light: #17807a;
+        --secondary-soft: #e6f7f9;
+
+        /* Tertiary Colors */
+        --tertiary-white: #ffffff;
+        --tertiary-cream: #fffaeb;
+        --tertiary-gray: #f5f5f5;
+
+        /* Surface */
+        --surface-base: #ffffff;
+        --surface-subtle: #f8fafc;
+        --surface-alt: #e0f2fe;
+        --surface-card: #f1f5f9;
+
+        /* Accent */
+        --accent-orange: #ff6b35;
+        --accent-yellow: #f59e0b;
+
+        /* Ink/Text */
+        --ink-black: #000000;
+        --ink-darkGray: #2a2828;
+        --ink-mediumGray: #4b5563;
+        --ink-lightGray: #a4a4a4;
+        --ink-muted: #64748b;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        color: var(--ink-black);
+        background: var(--tertiary-white);
+        line-height: 1.6;
+      }
+
+      /* ===== NAVIGATION ===== */
+      .nav {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--tertiary-gray);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-inner {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--primary-base);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--ink-darkGray);
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 300ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-base);
+      }
+
+      .nav-cta {
+        background: var(--secondary-base);
+        color: var(--tertiary-white);
+        padding: 10px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background 300ms ease, transform 200ms ease;
+      }
+
+      .nav-cta:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== HERO SECTION ===== */
+      .hero {
+        margin-top: 72px;
+        padding: 120px 24px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-soft) 0%,
+          var(--secondary-soft) 100%
+        );
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .breadcrumb {
+        position: absolute;
+        top: 100px;
+        left: 24px;
+        font-size: 14px;
+        color: var(--ink-muted);
+        font-weight: 500;
+      }
+
+      .hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--primary-base);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+        color: var(--ink-mediumGray);
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      /* Search Bar */
+      .search-bar {
+        display: flex;
+        gap: 12px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .search-input {
+        flex: 1;
+        padding: 14px 18px;
+        border: 2px solid var(--tertiary-white);
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color 300ms ease, box-shadow 300ms ease;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: var(--primary-base);
+        box-shadow: 0 0 0 3px var(--primary-soft);
+      }
+
+      .search-btn {
+        background: var(--primary-base);
+        color: var(--tertiary-white);
+        border: none;
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 300ms ease, transform 200ms ease;
+      }
+
+      .search-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      .hero-cta {
+        display: inline-block;
+        background: var(--primary-base);
+        color: var(--tertiary-white);
+        padding: 14px 36px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        transition: background 300ms ease, transform 200ms ease;
+      }
+
+      .hero-cta:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== SECTION CONTAINER ===== */
+      .section {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 80px 24px;
+      }
+
+      .section-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--ink-black);
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: var(--ink-mediumGray);
+        margin-bottom: 60px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ===== CITIES SECTION ===== */
+      .cities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-bottom: 40px;
+      }
+
+      .city-card {
+        background: var(--surface-base);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 300ms ease, transform 300ms ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .city-card:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+      }
+
+      .city-image {
+        height: 240px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--secondary-light)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--tertiary-white);
+        font-size: 48px;
+      }
+
+      .city-content {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .city-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink-black);
+        margin-bottom: 8px;
+      }
+
+      .city-stats {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        color: var(--ink-muted);
+      }
+
+      .city-description {
+        font-size: 14px;
+        color: var(--ink-mediumGray);
+        margin-bottom: 20px;
+        flex: 1;
+      }
+
+      .city-actions {
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 300ms ease, transform 200ms ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: var(--primary-base);
+        color: var(--tertiary-white);
+        flex: 1;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: var(--secondary-base);
+        color: var(--tertiary-white);
+        flex: 1;
+      }
+
+      .btn-secondary:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== SERVICES SECTION ===== */
+      .services-container {
+        position: relative;
+      }
+
+      .service-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        margin-bottom: 80px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid var(--tertiary-gray);
+      }
+
+      .service-row:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .services-toggle {
+        display: none;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .toggle-btn {
+        background: var(--secondary-base);
+        color: var(--tertiary-white);
+        border: none;
+        padding: 12px 32px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 300ms ease, transform 200ms ease;
+      }
+
+      .toggle-btn:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+
+      .service-row.reverse {
+        direction: rtl;
+      }
+
+      .service-row.reverse > * {
+        direction: ltr;
+      }
+
+      .service-image-wrapper {
+        height: 360px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--secondary-light)
+        );
+        border-radius: 12px;
+        border-left: 6px solid var(--primary-base);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--tertiary-white);
+        font-size: 72px;
+      }
+
+      .service-content h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--primary-base);
+        margin-bottom: 12px;
+      }
+
+      .service-description {
+        font-size: 15px;
+        color: var(--ink-mediumGray);
+        margin-bottom: 24px;
+        line-height: 1.8;
+      }
+
+      .service-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .feature-item {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--ink-darkGray);
+        align-items: flex-start;
+      }
+
+      .feature-icon {
+        color: var(--secondary-base);
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .btn-learn-more {
+        background: var(--secondary-base);
+        color: var(--tertiary-white);
+        border: none;
+        padding: 12px 28px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 300ms ease, transform 200ms ease;
+      }
+
+      .btn-learn-more:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== CTA SECTION ===== */
+      .cta-section {
+        background: var(--primary-base);
+        color: var(--tertiary-white);
+        padding: 80px 24px;
+        text-align: center;
+      }
+
+      .cta-section-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .cta-text {
+        font-size: 18px;
+        margin-bottom: 32px;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--tertiary-white);
+        color: var(--primary-base);
+        padding: 14px 40px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        transition: transform 200ms ease, box-shadow 300ms ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: var(--ink-darkGray);
+        color: var(--tertiary-white);
+        padding: 60px 24px 40px;
+        text-align: center;
+      }
+
+      .footer-inner {
+        max-width: 1320px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .footer-col h4 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .footer-col p,
+      .footer-col a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        line-height: 1.8;
+      }
+
+      .footer-col a:hover {
+        color: var(--primary-light);
+      }
+
+      .footer-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 24px;
+      }
+
+      .footer-bottom {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ===== FLOATING CONTACT ===== */
+      .floating-contact {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        display: flex;
+        gap: 12px;
+        z-index: 999;
+      }
+
+      .contact-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        transition: transform 300ms ease, box-shadow 300ms ease;
+        text-decoration: none;
+      }
+
+      .contact-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .whatsapp-btn {
+        background: #25d366;
+        color: white;
+      }
+
+      .call-btn {
+        background: var(--primary-base);
+        color: white;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 1024px) {
+        .service-row {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .service-row.reverse {
+          direction: ltr;
+        }
+
+        .services-toggle {
+          display: flex;
+        }
+
+        .service-row:nth-child(n+4) {
+          display: none;
+        }
+
+        .service-row.show-all:nth-child(n+4) {
+          display: grid;
+        }
+
+        .hero-title {
+          font-size: 42px;
+        }
+
+        .section-title {
+          font-size: 36px;
+        }
+
+        .service-image-wrapper {
+          height: 280px;
+        }
+
+        .service-content h3 {
+          font-size: 28px;
+        }
+
+        .city-card {
+          margin-bottom: 16px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .breadcrumb {
+          top: 90px;
+          left: 16px;
+          font-size: 12px;
+        }
+
+        .search-bar {
+          flex-direction: column;
+        }
+
+        .search-input,
+        .search-btn {
+          width: 100%;
+        }
+
+        .nav-links {
+          gap: 16px;
+          font-size: 12px;
+        }
+
+        .hero {
+          padding: 80px 24px;
+        }
+
+        .hero-title {
+          font-size: 32px;
+        }
+
+        .hero-subtitle {
+          font-size: 16px;
+        }
+
+        .section {
+          padding: 60px 24px;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+
+        .service-features {
+          grid-template-columns: 1fr;
+        }
+
+        .service-content h3 {
+          font-size: 24px;
+        }
+
+        .city-actions {
+          flex-direction: column;
+        }
+
+        .cities-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          text-align: center;
+        }
+
+        .floating-contact {
+          bottom: 16px;
+          right: 16px;
+          gap: 8px;
+        }
+
+        .contact-btn {
+          width: 52px;
+          height: 52px;
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="/" class="logo">🏥 DTA</a>
+        <div class="nav-links">
+          <a href="#cities">Cities</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="nav-cta">Book Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="breadcrumb">Home / Dental Tourism Albania</div>
+      <div class="hero-inner">
+        <h1 class="hero-title">Premium Dental Care in Albania</h1>
+        <p class="hero-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search treatments, cities, or specialists..."
+          />
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section id="cities" class="section">
+      <h2 class="section-title">Explore Our Destinations</h2>
+      <p class="section-subtitle">
+        Combine your dental treatment with an unforgettable travel experience
+        across Albania's stunning cities.
+      </p>
+
+      <div class="cities-grid">
+        <!-- Tirana -->
+        <div class="city-card">
+          <div class="city-image">🏛️</div>
+          <div class="city-content">
+            <h3 class="city-name">Tirana</h3>
+            <div class="city-stats">
+              <span>🏥 5 Clinics</span>
+              <span>⭐ 4.9</span>
+            </div>
+            <p class="city-description">
+              Albania's vibrant capital city with modern healthcare facilities
+              and rich cultural heritage.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Durrës -->
+        <div class="city-card">
+          <div class="city-image">🏖️</div>
+          <div class="city-content">
+            <h3 class="city-name">Durrës</h3>
+            <div class="city-stats">
+              <span>🏥 3 Clinics</span>
+              <span>⭐ 4.8</span>
+            </div>
+            <p class="city-description">
+              Coastal paradise combining relaxing beach time with top-tier
+              dental treatment and services.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vlorë -->
+        <div class="city-card">
+          <div class="city-image">🌊</div>
+          <div class="city-content">
+            <h3 class="city-name">Vlorë</h3>
+            <div class="city-stats">
+              <span>🏥 2 Clinics</span>
+              <span>⭐ 4.7</span>
+            </div>
+            <p class="city-description">
+              Beautiful seaside town known for pristine beaches and excellent
+              dental healthcare options.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sarandë -->
+        <div class="city-card">
+          <div class="city-image">🏝️</div>
+          <div class="city-content">
+            <h3 class="city-name">Sarandë</h3>
+            <div class="city-stats">
+              <span>🏥 2 Clinics</span>
+              <span>⭐ 4.9</span>
+            </div>
+            <p class="city-description">
+              Picturesque coastal destination with stunning views and
+              specialized dental treatment centers.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shkodër -->
+        <div class="city-card">
+          <div class="city-image">🏰</div>
+          <div class="city-content">
+            <h3 class="city-name">Shkodër</h3>
+            <div class="city-stats">
+              <span>🏥 2 Clinics</span>
+              <span>⭐ 4.6</span>
+            </div>
+            <p class="city-description">
+              Historic city with charming architecture and modern dental
+              facilities for your treatment needs.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berat -->
+        <div class="city-card">
+          <div class="city-image">🏯</div>
+          <div class="city-content">
+            <h3 class="city-name">Berat</h3>
+            <div class="city-stats">
+              <span>🏥 1 Clinic</span>
+              <span>⭐ 4.8</span>
+            </div>
+            <p class="city-description">
+              UNESCO world heritage site offering a unique blend of history,
+              culture, and dental healthcare.
+            </p>
+            <div class="city-actions">
+              <button class="btn btn-primary">View Clinics</button>
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <h2 class="section-title">Our Dental Services</h2>
+      <p class="section-subtitle">
+        Comprehensive range of professional dental treatments delivered by
+        experienced specialists.
+      </p>
+
+      <div class="services-container">
+
+      <!-- General Dentistry -->
+      <div class="service-row">
+        <div class="service-image-wrapper">😁</div>
+        <div class="service-content">
+          <h3>General Dentistry</h3>
+          <p class="service-description">
+            Complete oral health care including cleanings, examinations, and
+            preventive treatments. Our general dentists provide thorough
+            evaluations and develop personalized treatment plans for your dental
+            health.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Regular checkups & cleanings</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Preventive care programs</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Cavity detection</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Fluoride treatments</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Cosmetic Dentistry -->
+      <div class="service-row reverse">
+        <div class="service-image-wrapper">✨</div>
+        <div class="service-content">
+          <h3>Cosmetic Dentistry</h3>
+          <p class="service-description">
+            Transform your smile with our advanced cosmetic procedures. From
+            teeth whitening to veneers, we offer cutting-edge treatments to
+            achieve your dream smile.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Professional teeth whitening</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Porcelain veneers</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Smile makeovers</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Composite bonding</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Implant Dentistry -->
+      <div class="service-row">
+        <div class="service-image-wrapper">🦷</div>
+        <div class="service-content">
+          <h3>Implant Dentistry</h3>
+          <p class="service-description">
+            Replace missing teeth with natural-looking dental implants. Our
+            specialists use state-of-the-art technology for successful,
+            long-lasting results.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Single tooth implants</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Multi-tooth solutions</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Full mouth implants</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Implant restoration</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Orthodontics -->
+      <div class="service-row reverse">
+        <div class="service-image-wrapper">📐</div>
+        <div class="service-content">
+          <h3>Orthodontics</h3>
+          <p class="service-description">
+            Straighten your teeth with modern orthodontic solutions. Choose from
+            traditional braces or invisible aligners for a perfect smile.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Traditional braces</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Invisible aligners</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Clear brackets</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Lingual braces</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Periodontics -->
+      <div class="service-row">
+        <div class="service-image-wrapper">🌳</div>
+        <div class="service-content">
+          <h3>Periodontics</h3>
+          <p class="service-description">
+            Specialized care for gum health and disease prevention. Our
+            periodontists offer advanced treatments to maintain your periodontal
+            health.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Gum disease treatment</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Deep cleaning procedures</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Graft procedures</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Laser periodontal therapy</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Pediatric Dentistry -->
+      <div class="service-row reverse">
+        <div class="service-image-wrapper">👶</div>
+        <div class="service-content">
+          <h3>Pediatric Dentistry</h3>
+          <p class="service-description">
+            Specialized dental care for children in a friendly, welcoming
+            environment. We make dental visits fun and comfortable for your
+            child.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Kids-friendly treatments</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Preventive education</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Fluoride applications</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Sealant protection</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Endodontics -->
+      <div class="service-row">
+        <div class="service-image-wrapper">⚙️</div>
+        <div class="service-content">
+          <h3>Endodontics</h3>
+          <p class="service-description">
+            Root canal therapy and advanced endodontic treatments to save your
+            natural teeth. Our specialists ensure painless, effective treatment.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Root canal treatment</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Retreatment procedures</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Apical surgery</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Emergency treatments</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Prosthodontics -->
+      <div class="service-row reverse">
+        <div class="service-image-wrapper">👄</div>
+        <div class="service-content">
+          <h3>Prosthodontics</h3>
+          <p class="service-description">
+            Custom dentures and bridges to restore your smile. Fabricated with
+            precision for comfort and natural appearance.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Complete dentures</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Partial dentures</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Dental bridges</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Implant-supported crowns</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Oral Surgery -->
+      <div class="service-row">
+        <div class="service-image-wrapper">🔨</div>
+        <div class="service-content">
+          <h3>Oral Surgery</h3>
+          <p class="service-description">
+            Advanced surgical procedures for complex dental cases. Performed by
+            experienced oral surgeons with state-of-the-art equipment.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Wisdom tooth extraction</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Bone grafting</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Jaw reconstruction</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Sinus lift procedures</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+
+      <!-- Restorative Dentistry -->
+      <div class="service-row reverse">
+        <div class="service-image-wrapper">🔧</div>
+        <div class="service-content">
+          <h3>Restorative Dentistry</h3>
+          <p class="service-description">
+            Restore damaged or missing teeth with high-quality materials and
+            techniques. Achieve optimal function and aesthetics.
+          </p>
+          <div class="service-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Composite fillings</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Crowns & bridges</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Amalgam removal</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Inlays & onlays</span>
+            </div>
+          </div>
+          <button class="btn-learn-more">Learn more →</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="services-toggle">
+        <button class="toggle-btn" onclick="toggleServices()">
+          View More Services ↓
+        </button>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-section-inner">
+        <h2 class="cta-title">Ready to Transform Your Smile?</h2>
+        <p class="cta-text">
+          Start your dental tourism journey today. Affordable, high-quality
+          treatment combined with an unforgettable travel experience.
+        </p>
+        <a href="#contact" class="cta-button">Book Your Appointment Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>About DTA</h4>
+            <p>
+              Dental Tourism Albania is your gateway to premium dental care
+              combined with unforgettable travel experiences.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#cities">Destinations</a><br />
+            <a href="#services">Services</a><br />
+            <a href="#about">About Us</a><br />
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <p>📞 +355 (0) 4 251 2345</p>
+            <p>📧 info@dentaltourism.al</p>
+            <p>📍 Tirana, Albania</p>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <a href="#">Facebook</a><br />
+            <a href="#">Instagram</a><br />
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Dental Tourism Albania. All rights reserved. | Privacy
+            Policy | Terms of Service
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+      <a
+        href="https://wa.me/355123456789"
+        class="contact-btn whatsapp-btn"
+        title="WhatsApp"
+      >
+        💬
+      </a>
+      <a href="tel:+355123456789" class="contact-btn call-btn" title="Call">
+        ☎️
+      </a>
+    </div>
+
+  <script>
+    function toggleServices() {
+      const container = document.querySelector('.services-container');
+      const button = document.querySelector('.toggle-btn');
+      
+      container.classList.toggle('show-all');
+      
+      if (container.classList.contains('show-all')) {
+        button.textContent = 'Show Less Services ↑';
+      } else {
+        button.textContent = 'View More Services ↓';
+      }
+    }
+  </script>
