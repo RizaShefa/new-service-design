@@ -18,6 +18,10 @@
       }
 
       :root {
+        /* Fonts */
+        --font-header: "Montserrat", system-ui, sans-serif;
+        --font-body: "Inter", system-ui, sans-serif;
+
         /* Primary Colors */
         --primary-base: #1a759f;
         --primary-dark: #116287;
@@ -54,7 +58,7 @@
       }
 
       body {
-        font-family: "Inter", -apple-system, sans-serif;
+        font-family: var(--font-body);
         color: var(--ink-black);
         background: var(--tertiary-white);
         line-height: 1.6;
@@ -66,7 +70,7 @@
       h4,
       h5,
       h6 {
-        font-family: "Montserrat", sans-serif;
+        font-family: var(--font-header);
       }
 
       /* ===== NAVIGATION ===== */
