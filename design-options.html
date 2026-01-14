@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Options - Premium Dental Care Section</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-base: #1a759f;
+        --primary-dark: #116287;
+        --primary-light: #1c82b1;
+        --primary-soft: #e0f2fe;
+        --secondary-base: #14706b;
+        --secondary-dark: #11615d;
+        --secondary-light: #17807a;
+        --secondary-soft: #e6f7f9;
+        --tertiary-white: #ffffff;
+        --tertiary-cream: #fffaeb;
+        --tertiary-gray: #f5f5f5;
+        --surface-base: #ffffff;
+        --surface-subtle: #f8fafc;
+        --surface-alt: #e0f2fe;
+        --surface-card: #f1f5f9;
+        --accent-orange: #ff6b35;
+        --accent-yellow: #f59e0b;
+        --ink-black: #000000;
+        --ink-darkGray: #2a2828;
+        --ink-mediumGray: #4b5563;
+        --ink-lightGray: #a4a4a4;
+        --ink-muted: #64748b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        background: var(--tertiary-white);
+        padding: 20px;
+      }
+
+      .option-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        border: 3px solid var(--primary-base);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .option-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-base) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        padding: 20px 24px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .section {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 80px 24px;
+      }
+
+      .section-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--ink-black);
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: var(--ink-mediumGray);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ===== OPTION 1: CENTERED SEARCH + GRID BELOW ===== */
+      .option1-search {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        max-width: 500px;
+        margin: 0 auto 60px;
+      }
+
+      .option1-input {
+        flex: 1;
+        padding: 14px 18px;
+        border: 2px solid var(--primary-base);
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: all 300ms ease;
+      }
+
+      .option1-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px var(--primary-soft);
+      }
+
+      .option1-btn {
+        background: var(--primary-base);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+      }
+
+      .option1-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* ===== OPTION 2: SIDE BY SIDE LAYOUT ===== */
+      .option2-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .option2-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .option2-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .option2-input {
+        padding: 14px 18px;
+        border: 2px solid var(--primary-base);
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: inherit;
+      }
+
+      .option2-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px var(--primary-soft);
+      }
+
+      .option2-btn {
+        background: var(--secondary-base);
+        color: white;
+        padding: 14px 24px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+      }
+
+      .option2-btn:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+
+      .option2-visual {
+        height: 300px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-soft) 0%,
+          var(--secondary-soft) 100%
+        );
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+      }
+
+      /* ===== OPTION 3: TABS/TOGGLE LAYOUT ===== */
+      .option3-tabs {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .option3-tab-btn {
+        padding: 12px 24px;
+        border: 2px solid var(--primary-base);
+        background: white;
+        color: var(--primary-base);
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+      }
+
+      .option3-tab-btn.active {
+        background: var(--primary-base);
+        color: white;
+      }
+
+      .option3-tab-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      /* ===== CITIES GRID (FILTER BUTTONS) ===== */
+      .cities-grid {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .city-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border: 2px solid #e0e0e0;
+        background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 300ms ease;
+        color: var(--ink-mediumGray);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .city-card:hover {
+        border-color: var(--primary-base);
+        box-shadow: 0 4px 12px rgba(26, 117, 159, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .city-card.active {
+        background: linear-gradient(
+          135deg,
+          var(--primary-base) 0%,
+          var(--primary-dark) 100%
+        );
+        border-color: var(--primary-dark);
+        box-shadow: 0 6px 20px rgba(26, 117, 159, 0.25);
+      }
+
+      .city-image {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .city-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .city-name {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: inherit;
+        margin-bottom: 0;
+      }
+
+      .city-card.active .city-name {
+        color: white;
+      }
+
+      .city-description {
+        display: block;
+        font-size: 12px;
+        color: #999;
+        line-height: 1.3;
+        margin-bottom: 0;
+      }
+
+      .city-card.active .city-description {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .city-stats {
+        display: none;
+      }
+
+      .city-actions {
+        display: none;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 10px 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+      }
+
+      .btn-primary {
+        background: var(--primary-base);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: var(--surface-card);
+        color: var(--ink-mediumGray);
+        border: 1px solid #d0d0d0;
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary-soft);
+        color: var(--primary-base);
+      }
+
+      /* ===== OPTION 4: SEGMENTED CONTROL ===== */
+      .segmented-control {
+        display: flex;
+        gap: 2px;
+        justify-content: center;
+        background: #f0f0f0;
+        padding: 4px;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 0 auto 40px;
+      }
+
+      .segment-btn {
+        padding: 10px 16px;
+        border: none;
+        background: transparent;
+        color: var(--ink-mediumGray);
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 200ms ease;
+        font-size: 14px;
+      }
+
+      .segment-btn:hover {
+        background: rgba(26, 117, 159, 0.1);
+      }
+
+      .segment-btn.active {
+        background: white;
+        color: var(--primary-base);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ===== OPTION 5: COLORED CHIPS ===== */
+      .chips-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .chip {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+        font-size: 14px;
+        color: white;
+        opacity: 0.6;
+      }
+
+      .chip:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      .chip.active {
+        opacity: 1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .chip-tirana {
+        background: linear-gradient(135deg, #1a759f 0%, #116287 100%);
+      }
+      .chip-durres {
+        background: linear-gradient(135deg, #14706b 0%, #11615d 100%);
+      }
+      .chip-vlore {
+        background: linear-gradient(135deg, #ff6b35 0%, #ff5520 100%);
+      }
+      .chip-sarande {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      }
+      .chip-shkoder {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+      .chip-berat {
+        background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+      }
+
+      /* ===== OPTION 6: MINIMAL BUTTONS ===== */
+      .minimal-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .minimal-btn {
+        background: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 8px;
+        color: var(--ink-mediumGray);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 300ms ease;
+        font-size: 14px;
+      }
+
+      .minimal-btn:hover {
+        color: var(--primary-base);
+      }
+
+      .minimal-btn.active {
+        color: var(--primary-base);
+        border-bottom-color: var(--primary-base);
+      }
+
+      /* ===== OPTION 7: BACKGROUND TILES ===== */
+      .tiles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+
+      .tile-btn {
+        position: relative;
+        padding: 24px 16px;
+        border: 2px solid #e0e0e0;
+        background: linear-gradient(
+          135deg,
+          rgba(26, 117, 159, 0.05) 0%,
+          rgba(20, 112, 107, 0.05) 100%
+        );
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 300ms ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .tile-btn::before {
+        content: attr(data-city);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.05;
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      .tile-btn:hover {
+        border-color: var(--primary-base);
+        box-shadow: 0 4px 12px rgba(26, 117, 159, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .tile-btn.active {
+        background: linear-gradient(
+          135deg,
+          var(--primary-soft) 0%,
+          var(--secondary-soft) 100%
+        );
+        border-color: var(--primary-base);
+        box-shadow: 0 6px 20px rgba(26, 117, 159, 0.15);
+      }
+
+      .tile-emoji {
+        font-size: 32px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .tile-name {
+        font-weight: 600;
+        color: var(--ink-mediumGray);
+        position: relative;
+        z-index: 1;
+        font-size: 14px;
+      }
+
+      .tile-btn.active .tile-name {
+        color: var(--primary-base);
+      }
+
+      /* ===== OPTION 8: RADIO BUTTONS ===== */
+      .radio-group {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .radio-option input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--primary-base);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 200ms ease;
+      }
+
+      .radio-option input[type="radio"]:hover {
+        box-shadow: 0 0 0 3px rgba(26, 117, 159, 0.1);
+      }
+
+      .radio-option input[type="radio"]:checked {
+        background: var(--primary-base);
+        box-shadow: inset 0 0 0 3px white;
+      }
+
+      .radio-label {
+        font-weight: 600;
+        color: var(--ink-mediumGray);
+        font-size: 14px;
+      }
+
+      .radio-option input[type="radio"]:checked + .radio-label {
+        color: var(--primary-base);
+      }
+
+      /* ===== OPTION 9: TAB NAVIGATION ===== */
+      .tab-navigation {
+        display: flex;
+        gap: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 40px;
+      }
+
+      .tab-item {
+        padding: 14px 24px;
+        border: none;
+        background: transparent;
+        color: var(--ink-mediumGray);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 200ms ease;
+        font-size: 14px;
+        position: relative;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+      }
+
+      .tab-item:hover {
+        color: var(--primary-base);
+      }
+
+      .tab-item.active {
+        color: var(--primary-base);
+        border-bottom-color: var(--primary-base);
+      }
+
+      /* ===== OPTION 10: CIRCULAR BUTTONS ===== */
+      .circles-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .circle-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        background: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        transition: all 300ms ease;
+        padding: 0;
+        position: relative;
+      }
+
+      .circle-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid #e0e0e0;
+        border-radius: 50%;
+        transition: all 300ms ease;
+      }
+
+      .circle-btn:hover::before {
+        border-color: var(--primary-base);
+        box-shadow: 0 0 0 3px rgba(26, 117, 159, 0.1);
+      }
+
+      .circle-btn.active::before {
+        border-color: var(--primary-base);
+        background: linear-gradient(
+          135deg,
+          var(--primary-soft) 0%,
+          var(--secondary-soft) 100%
+        );
+        box-shadow: 0 4px 12px rgba(26, 117, 159, 0.2);
+      }
+
+      .circle-emoji {
+        font-size: 32px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .circle-name {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--ink-mediumGray);
+        position: relative;
+        z-index: 1;
+      }
+
+      .circle-btn.active .circle-name {
+        color: var(--primary-base);
+      }
+
+      /* ===== OPTION 11: IMAGE CARDS WITH SLIDER (13+ CITIES) ===== */
+      .image-cards-wrapper {
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      .image-cards-slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .image-city-card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 300ms ease;
+        border: 3px solid transparent;
+        height: 180px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-city-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .image-city-card.active {
+        border-color: var(--primary-base);
+        box-shadow: 0 8px 24px rgba(26, 117, 159, 0.3);
+      }
+
+      .city-image-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 12px;
+      }
+
+      .city-image-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      }
+
+      .city-label {
+        position: relative;
+        z-index: 1;
+        color: white;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      /* Mobile Slider */
+      @media (max-width: 768px) {
+        .image-cards-slider {
+          display: flex;
+          overflow-x: auto;
+          gap: 12px;
+          padding: 10px 0;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .image-cards-slider::-webkit-scrollbar {
+          height: 6px;
+        }
+
+        .image-cards-slider::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+
+        .image-cards-slider::-webkit-scrollbar-thumb {
+          background: var(--primary-base);
+          border-radius: 10px;
+        }
+
+        .image-city-card {
+          flex: 0 0 140px;
+          height: 160px;
+        }
+
+        .city-label {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .option2-wrapper {
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+        }
+
+        .section {
+          padding: 50px 20px;
+        }
+
+        .section-title {
+          font-size: 32px;
+        }
+
+        .cities-grid {
+          gap: 8px;
+        }
+
+        /* Mobile scroll support for all option containers */
+        .segmented-control,
+        .minimal-buttons,
+        .tab-navigation {
+          display: flex;
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+          gap: 8px;
+          padding: 10px 0;
+          scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar styling */
+        .segmented-control::-webkit-scrollbar,
+        .minimal-buttons::-webkit-scrollbar,
+        .tab-navigation::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        .segmented-control::-webkit-scrollbar-track,
+        .minimal-buttons::-webkit-scrollbar-track,
+        .tab-navigation::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        .segmented-control::-webkit-scrollbar-thumb,
+        .minimal-buttons::-webkit-scrollbar-thumb,
+        .tab-navigation::-webkit-scrollbar-thumb {
+          background: var(--primary-base);
+          border-radius: 10px;
+        }
+
+        /* Ensure buttons don't shrink on mobile */
+        .segment-btn,
+        .minimal-btn,
+        .tab-item {
+          flex-shrink: 0;
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== OPTION 4: SEGMENTED CONTROL (iOS Style) ===== -->
+    <div class="option-container">
+      <div class="option-header">
+        OPTION 4: Segmented Control (iOS Style Grouped Buttons)
+      </div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="option1-search">
+          <input
+            type="text"
+            class="option1-input"
+            placeholder="Choose a city..."
+            list="cities-list"
+          />
+          <button class="option1-btn">Search</button>
+        </div>
+
+        <div class="cities-grid">
+          <!-- City Card 1 -->
+          <div class="city-card">
+            <div class="city-image">🏛️</div>
+            <div class="city-content">
+              <h3 class="city-name">Tirana</h3>
+              <div class="city-stats">
+                <span>🏥 5 Clinics</span>
+                <span>⭐ 4.9</span>
+              </div>
+              <p class="city-description">
+                Capital city with modern healthcare facilities and rich cultural
+                heritage.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Card 2 -->
+          <div class="city-card">
+            <div class="city-image">🏖️</div>
+            <div class="city-content">
+              <h3 class="city-name">Durrës</h3>
+              <div class="city-stats">
+                <span>🏥 3 Clinics</span>
+                <span>⭐ 4.8</span>
+              </div>
+              <p class="city-description">
+                Coastal paradise combining relaxing beach time with top-tier
+                dental treatment.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Card 3 -->
+          <div class="city-card">
+            <div class="city-image">🌊</div>
+            <div class="city-content">
+              <h3 class="city-name">Vlorë</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.7</span>
+              </div>
+              <p class="city-description">
+                Beautiful seaside town known for pristine beaches and excellent
+                healthcare.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Card 4 -->
+          <div class="city-card">
+            <div class="city-image">🏝️</div>
+            <div class="city-content">
+              <h3 class="city-name">Sarandë</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.9</span>
+              </div>
+              <p class="city-description">
+                Picturesque coastal destination with stunning views and
+                treatment centers.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Card 5 -->
+          <div class="city-card">
+            <div class="city-image">🏰</div>
+            <div class="city-content">
+              <h3 class="city-name">Shkodër</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.6</span>
+              </div>
+              <p class="city-description">
+                Historic city with charming architecture and modern dental
+                facilities.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Card 6 -->
+          <div class="city-card">
+            <div class="city-image">🏯</div>
+            <div class="city-content">
+              <h3 class="city-name">Berat</h3>
+              <div class="city-stats">
+                <span>🏥 1 Clinic</span>
+                <span>⭐ 4.8</span>
+              </div>
+              <p class="city-description">
+                UNESCO world heritage site offering history and dental
+                healthcare.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== OPTION 2: SIDE BY SIDE WITH VISUAL + SEARCH ===== -->
+    <div class="option-container">
+      <div class="option-header">
+        OPTION 2: Content + Visual on Left, Cities Below (Full Width)
+      </div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="option2-wrapper">
+          <div class="option2-content">
+            <h3
+              style="
+                font-family: Montserrat;
+                font-size: 24px;
+                color: var(--ink-black);
+              "
+            >
+              Choose Your Perfect Destination
+            </h3>
+            <p style="color: var(--ink-mediumGray); line-height: 1.6">
+              Select from 13 beautiful Albanian cities offering world-class
+              dental treatments combined with unforgettable travel experiences.
+            </p>
+            <div class="option2-input-group">
+              <input
+                type="text"
+                class="option2-input"
+                placeholder="Search cities..."
+                list="cities-list"
+              />
+              <button class="option2-btn">Explore Cities</button>
+            </div>
+          </div>
+          <div class="option2-visual">🗺️</div>
+        </div>
+
+        <div style="margin-top: 60px">
+          <div class="cities-grid">
+            <div class="city-card">
+              <div class="city-image">🏛️</div>
+              <div class="city-content">
+                <h3 class="city-name">Tirana</h3>
+                <div class="city-stats">
+                  <span>🏥 5 Clinics</span>
+                  <span>⭐ 4.9</span>
+                </div>
+                <p class="city-description">
+                  Capital city with modern facilities.
+                </p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-card">
+              <div class="city-image">🏖️</div>
+              <div class="city-content">
+                <h3 class="city-name">Durrës</h3>
+                <div class="city-stats">
+                  <span>🏥 3 Clinics</span>
+                  <span>⭐ 4.8</span>
+                </div>
+                <p class="city-description">
+                  Coastal paradise with beach access.
+                </p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-card">
+              <div class="city-image">🌊</div>
+              <div class="city-content">
+                <h3 class="city-name">Vlorë</h3>
+                <div class="city-stats">
+                  <span>🏥 2 Clinics</span>
+                  <span>⭐ 4.7</span>
+                </div>
+                <p class="city-description">
+                  Beautiful seaside town experience.
+                </p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-card">
+              <div class="city-image">🏝️</div>
+              <div class="city-content">
+                <h3 class="city-name">Sarandë</h3>
+                <div class="city-stats">
+                  <span>🏥 2 Clinics</span>
+                  <span>⭐ 4.9</span>
+                </div>
+                <p class="city-description">Picturesque coastal destination.</p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-card">
+              <div class="city-image">🏰</div>
+              <div class="city-content">
+                <h3 class="city-name">Shkodër</h3>
+                <div class="city-stats">
+                  <span>🏥 2 Clinics</span>
+                  <span>⭐ 4.6</span>
+                </div>
+                <p class="city-description">Historic city with architecture.</p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-card">
+              <div class="city-image">🏯</div>
+              <div class="city-content">
+                <h3 class="city-name">Berat</h3>
+                <div class="city-stats">
+                  <span>🏥 1 Clinic</span>
+                  <span>⭐ 4.8</span>
+                </div>
+                <p class="city-description">UNESCO world heritage site.</p>
+                <div class="city-actions">
+                  <button class="btn btn-primary">View Clinics</button>
+                  <button class="btn btn-secondary">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== OPTION 3: TABBED CITY SELECTION ===== -->
+    <div class="option-container">
+      <div class="option-header">
+        OPTION 3: Tabbed/Category Selection + Dynamic City Display
+      </div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="option3-tabs">
+          <button class="option3-tab-btn active">All Cities</button>
+          <button class="option3-tab-btn">Coastal Cities</button>
+          <button class="option3-tab-btn">Mountain Cities</button>
+          <button class="option3-tab-btn">Historic Cities</button>
+        </div>
+
+        <div class="cities-grid">
+          <div class="city-card">
+            <div class="city-image">🏛️</div>
+            <div class="city-content">
+              <h3 class="city-name">Tirana</h3>
+              <div class="city-stats">
+                <span>🏥 5 Clinics</span>
+                <span>⭐ 4.9</span>
+              </div>
+              <p class="city-description">
+                Capital city with modern facilities.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="city-image">🏖️</div>
+            <div class="city-content">
+              <h3 class="city-name">Durrës</h3>
+              <div class="city-stats">
+                <span>🏥 3 Clinics</span>
+                <span>⭐ 4.8</span>
+              </div>
+              <p class="city-description">
+                Coastal paradise with beach access.
+              </p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="city-image">🌊</div>
+            <div class="city-content">
+              <h3 class="city-name">Vlorë</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.7</span>
+              </div>
+              <p class="city-description">Beautiful seaside town experience.</p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="city-image">🏝️</div>
+            <div class="city-content">
+              <h3 class="city-name">Sarandë</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.9</span>
+              </div>
+              <p class="city-description">Picturesque coastal destination.</p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="city-image">🏰</div>
+            <div class="city-content">
+              <h3 class="city-name">Shkodër</h3>
+              <div class="city-stats">
+                <span>🏥 2 Clinics</span>
+                <span>⭐ 4.6</span>
+              </div>
+              <p class="city-description">Historic city with architecture.</p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="city-image">🏯</div>
+            <div class="city-content">
+              <h3 class="city-name">Berat</h3>
+              <div class="city-stats">
+                <span>🏥 1 Clinic</span>
+                <span>⭐ 4.8</span>
+              </div>
+              <p class="city-description">UNESCO world heritage site.</p>
+              <div class="city-actions">
+                <button class="btn btn-primary">View Clinics</button>
+                <button class="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== OPTION 4: SEGMENTED CONTROL (iOS Style) ===== -->
+    <div class="option-container">
+      <div class="option-header">
+        OPTION 4: Segmented Control (iOS Style Grouped Buttons)
+      </div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="segmented-control">
+          <button class="segment-btn active" data-city="Tirana">
+            🏛️ Tirana
+          </button>
+          <button class="segment-btn" data-city="Durrës">🏖️ Durrës</button>
+          <button class="segment-btn" data-city="Vlorë">🌊 Vlorë</button>
+          <button class="segment-btn" data-city="Sarandë">🏝️ Sarandë</button>
+          <button class="segment-btn" data-city="Shkodër">🏰 Shkodër</button>
+          <button class="segment-btn" data-city="Berat">🏯 Berat</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== OPTION 6: MINIMAL WITH UNDERLINE ===== -->
+    <div class="option-container">
+      <div class="option-header">
+        OPTION 6: Minimal Buttons with Bottom Border
+      </div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="minimal-buttons">
+          <button class="minimal-btn active" data-city="Tirana">
+            🏛️ Tirana
+          </button>
+          <button class="minimal-btn" data-city="Durrës">🏖️ Durrës</button>
+          <button class="minimal-btn" data-city="Vlorë">🌊 Vlorë</button>
+          <button class="minimal-btn" data-city="Sarandë">🏝️ Sarandë</button>
+          <button class="minimal-btn" data-city="Shkodër">🏰 Shkodër</button>
+          <button class="minimal-btn" data-city="Berat">🏯 Berat</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== OPTION 9: TAB NAVIGATION ===== -->
+    <div class="option-container">
+      <div class="option-header">OPTION 9: Horizontal Tab Navigation</div>
+      <section class="section">
+        <h2 class="section-title">Premium Dental Care in Albania</h2>
+        <p class="section-subtitle">
+          Discover world-class dental treatments combined with beautiful
+          Albanian destinations. Experience luxury healthcare at affordable
+          prices.
+        </p>
+
+        <div class="tab-navigation">
+          <button class="tab-item active" data-city="Tirana">🏛️ Tirana</button>
+          <button class="tab-item" data-city="Durrës">🏖️ Durrës</button>
+          <button class="tab-item" data-city="Vlorë">🌊 Vlorë</button>
+          <button class="tab-item" data-city="Sarandë">🏝️ Sarandë</button>
+          <button class="tab-item" data-city="Shkodër">🏰 Shkodër</button>
+          <button class="tab-item" data-city="Berat">🏯 Berat</button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Handle city selection for Options 4, 6, and 9
+
+      // Option 4: Segmented Control
+      document.querySelectorAll(".segment-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          this.parentElement
+            .querySelectorAll(".segment-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          console.log("Selected city (Segmented):", this.dataset.city);
+        });
+      });
+
+      // Option 6: Minimal Buttons
+      document.querySelectorAll(".minimal-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          this.parentElement
+            .querySelectorAll(".minimal-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          console.log("Selected city (Minimal):", this.dataset.city);
+        });
+      });
+
+      // Option 9: Tab Navigation with Mobile Swipe Support
+      const tabNavigation = document.querySelector(".tab-navigation");
+      if (tabNavigation) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        tabNavigation.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - tabNavigation.offsetLeft;
+          scrollLeft = tabNavigation.scrollLeft;
+        });
+
+        tabNavigation.addEventListener("mouseleave", () => {
+          isDown = false;
+        });
+
+        tabNavigation.addEventListener("mouseup", () => {
+          isDown = false;
+        });
+
+        tabNavigation.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - tabNavigation.offsetLeft;
+          const walk = (x - startX) * 1;
+          tabNavigation.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch support for mobile
+        tabNavigation.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].pageX - tabNavigation.offsetLeft;
+          scrollLeft = tabNavigation.scrollLeft;
+        });
+
+        tabNavigation.addEventListener("touchmove", (e) => {
+          const x = e.touches[0].pageX - tabNavigation.offsetLeft;
+          const walk = (x - startX) * 2;
+          tabNavigation.scrollLeft = scrollLeft - walk;
+        });
+      }
+
+      // Tab item click handler
+      document.querySelectorAll(".tab-item").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          this.parentElement
+            .querySelectorAll(".tab-item")
+            .forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+          console.log("Selected city (Tab):", this.dataset.city);
+
+          // Smooth scroll to center the active tab on mobile
+          if (window.innerWidth <= 768) {
+            this.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          }
+        });
+      });
+
+      // Make all containers scrollable on mobile
+      const setupMobileScroll = () => {
+        const containers = [
+          document.querySelector(".segmented-control"),
+          document.querySelector(".minimal-buttons"),
+          document.querySelector(".tab-navigation"),
+        ];
+
+        containers.forEach((container) => {
+          if (!container) return;
+
+          // Enable horizontal scroll on mobile
+          let isDown = false;
+          let startX;
+          let scrollLeft;
+
+          container.addEventListener("touchstart", (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+          });
+
+          container.addEventListener("touchmove", (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+          });
+
+          container.addEventListener("touchend", () => {
+            isDown = false;
+          });
+        });
+      };
+
+      setupMobileScroll();
+    </script>
+  </body>
+</html>
