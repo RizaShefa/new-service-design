@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -132,7 +132,9 @@
         text-decoration: none;
         font-size: 14px;
         font-weight: 600;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .nav-cta:hover {
@@ -198,7 +200,9 @@
         border-radius: 10px;
         font-size: 14px;
         font-family: inherit;
-        transition: border-color 300ms ease, box-shadow 300ms ease;
+        transition:
+          border-color 300ms ease,
+          box-shadow 300ms ease;
       }
 
       .search-input:focus {
@@ -215,7 +219,9 @@
         border-radius: 10px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .search-btn:hover {
@@ -232,7 +238,9 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 15px;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .hero-cta:hover {
@@ -279,7 +287,9 @@
         border-radius: 24px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        transition: box-shadow 300ms ease, transform 300ms ease;
+        transition:
+          box-shadow 300ms ease,
+          transform 300ms ease;
         display: flex;
         flex-direction: column;
       }
@@ -345,7 +355,9 @@
         font-size: 13px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
         text-decoration: none;
         display: inline-block;
         text-align: center;
@@ -409,7 +421,9 @@
         font-weight: 600;
         font-size: 14px;
         cursor: pointer;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .toggle-btn:hover {
@@ -488,7 +502,9 @@
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .btn-learn-more:hover {
@@ -532,7 +548,9 @@
         text-decoration: none;
         font-weight: 700;
         font-size: 15px;
-        transition: transform 200ms ease, box-shadow 300ms ease;
+        transition:
+          transform 200ms ease,
+          box-shadow 300ms ease;
       }
 
       .cta-button:hover {
@@ -611,7 +629,9 @@
         align-items: center;
         justify-content: center;
         font-size: 28px;
-        transition: transform 300ms ease, box-shadow 300ms ease;
+        transition:
+          transform 300ms ease,
+          box-shadow 300ms ease;
         text-decoration: none;
       }
 
@@ -1142,7 +1162,9 @@
         border-radius: 12px;
         overflow: hidden;
         cursor: pointer;
-        transition: transform 300ms ease, box-shadow 300ms ease;
+        transition:
+          transform 300ms ease,
+          box-shadow 300ms ease;
         background: var(--surface-card);
       }
 
@@ -1210,7 +1232,9 @@
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
-        transition: background 300ms ease, transform 200ms ease;
+        transition:
+          background 300ms ease,
+          transform 200ms ease;
       }
 
       .pagination-btn:hover:not(:disabled) {
@@ -1312,67 +1336,12 @@
 
     <!-- Cities Section -->
 
-    <!-- OPTION 4: City Selector Buttons -->
-    <section
-      class="section"
-      style="padding: 80px 24px; background: var(--tertiary-white)"
-    >
-      <div class="option-container" style="border: none; box-shadow: none">
-        <div
-          class="option-header"
-          style="
-            background: none;
-            color: var(--ink-black);
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-          "
-        >
-          OPTION 1: City Selector Buttons
-        </div>
-        <h2 class="section-title">Premium Dental Care in Albania</h2>
-        <p class="section-subtitle">
-          Discover world-class dental treatments combined with beautiful
-          Albanian destinations. Experience luxury healthcare at affordable
-          prices.
-        </p>
-
-        <div class="segmented-control">
-          <button class="segment-btn active" data-city="tirana">Tirana</button>
-          <button class="segment-btn" data-city="durres">Durrës</button>
-          <button class="segment-btn" data-city="vlore">Vlorë</button>
-          <button class="segment-btn" data-city="sarande">Sarandë</button>
-          <button class="segment-btn" data-city="shkoder">Shkodër</button>
-          <button class="segment-btn" data-city="berat">Berat</button>
-          <button class="segment-btn" data-city="elbasan">Elbasan</button>
-          <button class="segment-btn" data-city="korce">Korçë</button>
-          <button class="segment-btn" data-city="fier">Fier</button>
-          <button class="segment-btn" data-city="lezhe">Lezhë</button>
-          <button class="segment-btn" data-city="lushnje">Lushnjë</button>
-          <button class="segment-btn" data-city="pogradec">Pogradec</button>
-          <button class="segment-btn" data-city="kruje">Krujë</button>
-        </div>
-      </div>
-    </section>
-
     <!-- OPTION 6: Minimal City Navigation -->
     <section
       class="section"
       style="padding: 80px 24px; background: var(--tertiary-white)"
     >
       <div class="option-container" style="border: none; box-shadow: none">
-        <div
-          class="option-header"
-          style="
-            background: none;
-            color: var(--ink-black);
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-          "
-        >
-          OPTION 2: Minimal City Navigation
-        </div>
         <h2 class="section-title">Premium Dental Care in Albania</h2>
         <p class="section-subtitle">
           Discover world-class dental treatments combined with beautiful
@@ -1883,9 +1852,8 @@
         });
 
         // Update pagination controls
-        document.getElementById(
-          "pageInfo"
-        ).textContent = `Page ${currentPage} of ${totalPages}`;
+        document.getElementById("pageInfo").textContent =
+          `Page ${currentPage} of ${totalPages}`;
         document.getElementById("prevBtn").disabled = currentPage === 1;
         document.getElementById("nextBtn").disabled =
           currentPage === totalPages;
